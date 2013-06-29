@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='my-app'>
+  <head>
+    <title>enome-components/angular-dnd</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.js'></script>
+    <script src='build/build.js'></script>
+    <script>
+      require('angular-dnd-directives');
+      var module = angular.module('my-app', ['dnd-directives']);
+
+      module.controller('Ctrl', function ($scope) {
+        $scope.execute = function ($event, name) {
+          $event.preventDefault();
+          console.log(name, $event);
+        };
+      });
+
+    </script>
+
+    <style>
+      div {
+        border: 2px dashed gray;
+        color: gray;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 3em;
+        background: silver;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div ng-controller='Ctrl'
+          dragstart='execute($event, "dragstart")'
+          dragend='execute($event, "dragend")'
+          dragenter='execute($event, "dragenter")'
+          dragover='execute($event, "dragover")'
+          dragleave='execute($event, "dragleave")'
+          drop='execute($event, "drop")'>
+
+      Drag &amp; drop stuff here.
+
+    </div>
+  </body>
+</html>

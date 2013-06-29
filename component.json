@@ -1,0 +1,19 @@
+{
+  "name": "angular-dnd-directives",
+  "repo": "enome-component/angular-dnd-directives",
+  "description": "Drag and drop attribute directives for Angular.js",
+  "version": "1.0.0",
+  "keywords": [
+    "angular",
+    "attribute",
+    "directive",
+    "drop",
+    "drag"
+  ],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": ["index.js"],
+  "styles": []
+}
